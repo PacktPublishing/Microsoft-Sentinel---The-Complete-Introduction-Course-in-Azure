@@ -1,0 +1,8 @@
+Pulsedive API root URL
+https://pulsedive.com/taxii2/api/
+
+Pulsedive Collection ID
+981c4916-ebb2-4567-aece-54ae970c4230
+
+Username
+taxii2

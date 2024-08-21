@@ -1,0 +1,29 @@
+Incident Title - 1
+--------------------------------------------------------
+Potential Kerberoasing
+--------------------------------------------------------
+Incident Description - 1
+--------------------------------------------------------
+A service principal name (SPN) is used to uniquely identify a service instance in a Windows environment. Each SPN is usually associated with a service account. Organizations may have used service accounts with weak passwords in their environment. An attacker can try requesting Kerberos ticket-granting service (TGS) service tickets for any SPN from a domain controller (DC) which contains a hash of the Service account. This can then be used for offline cracking. This hunting query looks for accounts that are generating excessive requests to different resources within the last hour compared with the previous 24 hours. Normal users would not make an unusually large number of request within a small time window. This is based on 4769 events which can be very noisy so environment based tweaking might be needed.
+--------------------------------------------------------
+--------------------------------------------------------
+--------------------------------------------------------
+Incident Title - 2
+--------------------------------------------------------
+Dumping LSASS Process Into a File
+--------------------------------------------------------
+Incident Description - 2
+--------------------------------------------------------
+Adversaries may attempt to access credential material stored in the process memory of the Local Security Authority Subsystem Service (LSASS). After a user logs on, the system generates and stores a variety of credential materials in LSASS process memory. These credential materials can be harvested by an administrative user or system and used to conduct lateral movement using alternate authentication materials. As well as in-memory techniques, the LSASS process memory can be dumped from the target host and analyzed on a local system.
+--------------------------------------------------------
+--------------------------------------------------------
+--------------------------------------------------------
+Incident Title - 3
+--------------------------------------------------------
+Scheduled Task Hide
+--------------------------------------------------------
+Incident Description - 3
+--------------------------------------------------------
+This query detects attempts by malware to hide the scheduled task by deleting the SD (Security Descriptor) value. Removal of SD value results in the scheduled task disappearing from schtasks /query and Task Scheduler. The query requires auditing to be turned on for HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Schedule\TaskCache\Tree registry hive as well as audit policy for registry auditing to be turned on.
+Reference: https://www.microsoft.com/security/blog/2022/04/12/tarrask-malware-uses-scheduled-tasks-for-defense-evasion/
+Reference: https://4sysops.com/archives/audit-changes-in-the-windows-registry/

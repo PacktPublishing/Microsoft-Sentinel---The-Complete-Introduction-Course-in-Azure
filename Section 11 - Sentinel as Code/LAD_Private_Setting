@@ -1,0 +1,16 @@
+{
+    "storageAccountName": "STORAGE_ACCOUNT_NAME_REPLACEMENT",
+    "storageAccountSasToken": "SAS_TOKEN_REPLACEMENT",
+    "sinksConfig": {
+        "sink": [
+            {
+                "name": "SyslogJsonBlob",
+                "type": "JsonBlob"
+            },
+            {
+                "name": "MyJsonMetricsBlob",
+                "type": "JsonBlob"
+            }
+        ]
+    }
+}
